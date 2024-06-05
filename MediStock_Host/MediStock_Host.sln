@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32526.322
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediStock_Host", "MediStock_Host.csproj", "{55416FE1-CACB-49A3-80A3-11AFED7A6252}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{55416FE1-CACB-49A3-80A3-11AFED7A6252}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55416FE1-CACB-49A3-80A3-11AFED7A6252}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55416FE1-CACB-49A3-80A3-11AFED7A6252}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55416FE1-CACB-49A3-80A3-11AFED7A6252}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B09FA3E2-AEE2-453A-A7D3-B9FD2DDFBEA2}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,14 @@
+C:\Users\user1\Desktop\MediStock_Service\MediStock_Service\bin\Debug\MediStock_Service.dll.config
+C:\Users\user1\Desktop\MediStock_Service\MediStock_Service\bin\Debug\MediStock_Service.dll
+C:\Users\user1\Desktop\MediStock_Service\MediStock_Service\bin\Debug\MediStock_Service.pdb
+C:\Users\user1\Desktop\MediStock_Service\MediStock_Service\obj\Debug\MediStock_Service.csproj.AssemblyReference.cache
+C:\Users\user1\Desktop\MediStock_Service\MediStock_Service\obj\Debug\MediStock_Service.csproj.CoreCompileInputs.cache
+C:\Users\user1\Desktop\MediStock_Service\MediStock_Service\obj\Debug\MediStock_Service.dll
+C:\Users\user1\Desktop\MediStock_Service\MediStock_Service\obj\Debug\MediStock_Service.pdb
+C:\Nilay\SEM-6\WSD\MediStock_PRoject\MediStock_Service\MediStock_Service\bin\Debug\MediStock_Service.dll.config
+C:\Nilay\SEM-6\WSD\MediStock_PRoject\MediStock_Service\MediStock_Service\bin\Debug\MediStock_Service.dll
+C:\Nilay\SEM-6\WSD\MediStock_PRoject\MediStock_Service\MediStock_Service\bin\Debug\MediStock_Service.pdb
+C:\Nilay\SEM-6\WSD\MediStock_PRoject\MediStock_Service\MediStock_Service\obj\Debug\MediStock_Service.csproj.AssemblyReference.cache
+C:\Nilay\SEM-6\WSD\MediStock_PRoject\MediStock_Service\MediStock_Service\obj\Debug\MediStock_Service.csproj.CoreCompileInputs.cache
+C:\Nilay\SEM-6\WSD\MediStock_PRoject\MediStock_Service\MediStock_Service\obj\Debug\MediStock_Service.dll
+C:\Nilay\SEM-6\WSD\MediStock_PRoject\MediStock_Service\MediStock_Service\obj\Debug\MediStock_Service.pdb

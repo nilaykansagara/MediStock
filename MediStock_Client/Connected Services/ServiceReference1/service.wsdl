@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="Stock_Service_Imp" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_stock_service_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1">
+        </msb:BinaryEncoding>
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <msf:WindowsTransportSecurity xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy">
+                  <msf:ProtectionLevel>EncryptAndSign</msf:ProtectionLevel>
+                </msf:WindowsTransportSecurity>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256>
+                </sp:Basic256>
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict>
+                </sp:Strict>
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <wsaw:UsingAddressing>
+        </wsaw:UsingAddressing>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/MediStock_Service" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="stock_service_GetStock_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStock" />
+  </wsdl:message>
+  <wsdl:message name="stock_service_GetStock_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStockResponse" />
+  </wsdl:message>
+  <wsdl:message name="stock_service_GetStockItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStockItem" />
+  </wsdl:message>
+  <wsdl:message name="stock_service_GetStockItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStockItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="stock_service_AddStock_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddStock" />
+  </wsdl:message>
+  <wsdl:message name="stock_service_AddStock_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddStockResponse" />
+  </wsdl:message>
+  <wsdl:message name="stock_service_UpdateStock_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateStock" />
+  </wsdl:message>
+  <wsdl:message name="stock_service_UpdateStock_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateStockResponse" />
+  </wsdl:message>
+  <wsdl:message name="stock_service_GetInvoiceofdDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInvoiceofdDate" />
+  </wsdl:message>
+  <wsdl:message name="stock_service_GetInvoiceofdDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInvoiceofdDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="stock_service_GetOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrder" />
+  </wsdl:message>
+  <wsdl:message name="stock_service_GetOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="stock_service_SearchInvoice_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchInvoice" />
+  </wsdl:message>
+  <wsdl:message name="stock_service_SearchInvoice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchInvoiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="stock_service_MakeInvoice_InputMessage">
+    <wsdl:part name="parameters" element="tns:MakeInvoice" />
+  </wsdl:message>
+  <wsdl:message name="stock_service_MakeInvoice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MakeInvoiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="stock_service_AddOrders_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddOrders" />
+  </wsdl:message>
+  <wsdl:message name="stock_service_AddOrders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="stock_service_GetUpcomingExpStock_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUpcomingExpStock" />
+  </wsdl:message>
+  <wsdl:message name="stock_service_GetUpcomingExpStock_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUpcomingExpStockResponse" />
+  </wsdl:message>
+  <wsdl:message name="stock_service_GetLessStock_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLessStock" />
+  </wsdl:message>
+  <wsdl:message name="stock_service_GetLessStock_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLessStockResponse" />
+  </wsdl:message>
+  <wsdl:message name="stock_service_DeleteStock_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteStock" />
+  </wsdl:message>
+  <wsdl:message name="stock_service_DeleteStock_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteStockResponse" />
+  </wsdl:message>
+  <wsdl:message name="stock_service_GetExpiredStock_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExpiredStock" />
+  </wsdl:message>
+  <wsdl:message name="stock_service_GetExpiredStock_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExpiredStockResponse" />
+  </wsdl:message>
+  <wsdl:portType name="stock_service">
+    <wsdl:operation name="GetStock">
+      <wsdl:input wsaw:Action="http://tempuri.org/stock_service/GetStock" message="tns:stock_service_GetStock_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/stock_service/GetStockResponse" message="tns:stock_service_GetStock_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStockItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/stock_service/GetStockItem" message="tns:stock_service_GetStockItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/stock_service/GetStockItemResponse" message="tns:stock_service_GetStockItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddStock">
+      <wsdl:input wsaw:Action="http://tempuri.org/stock_service/AddStock" message="tns:stock_service_AddStock_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/stock_service/AddStockResponse" message="tns:stock_service_AddStock_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStock">
+      <wsdl:input wsaw:Action="http://tempuri.org/stock_service/UpdateStock" message="tns:stock_service_UpdateStock_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/stock_service/UpdateStockResponse" message="tns:stock_service_UpdateStock_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInvoiceofdDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/stock_service/GetInvoiceofdDate" message="tns:stock_service_GetInvoiceofdDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/stock_service/GetInvoiceofdDateResponse" message="tns:stock_service_GetInvoiceofdDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/stock_service/GetOrder" message="tns:stock_service_GetOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/stock_service/GetOrderResponse" message="tns:stock_service_GetOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchInvoice">
+      <wsdl:input wsaw:Action="http://tempuri.org/stock_service/SearchInvoice" message="tns:stock_service_SearchInvoice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/stock_service/SearchInvoiceResponse" message="tns:stock_service_SearchInvoice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MakeInvoice">
+      <wsdl:input wsaw:Action="http://tempuri.org/stock_service/MakeInvoice" message="tns:stock_service_MakeInvoice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/stock_service/MakeInvoiceResponse" message="tns:stock_service_MakeInvoice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddOrders">
+      <wsdl:input wsaw:Action="http://tempuri.org/stock_service/AddOrders" message="tns:stock_service_AddOrders_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/stock_service/AddOrdersResponse" message="tns:stock_service_AddOrders_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUpcomingExpStock">
+      <wsdl:input wsaw:Action="http://tempuri.org/stock_service/GetUpcomingExpStock" message="tns:stock_service_GetUpcomingExpStock_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/stock_service/GetUpcomingExpStockResponse" message="tns:stock_service_GetUpcomingExpStock_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLessStock">
+      <wsdl:input wsaw:Action="http://tempuri.org/stock_service/GetLessStock" message="tns:stock_service_GetLessStock_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/stock_service/GetLessStockResponse" message="tns:stock_service_GetLessStock_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteStock">
+      <wsdl:input wsaw:Action="http://tempuri.org/stock_service/DeleteStock" message="tns:stock_service_DeleteStock_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/stock_service/DeleteStockResponse" message="tns:stock_service_DeleteStock_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExpiredStock">
+      <wsdl:input wsaw:Action="http://tempuri.org/stock_service/GetExpiredStock" message="tns:stock_service_GetExpiredStock_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/stock_service/GetExpiredStockResponse" message="tns:stock_service_GetExpiredStock_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetTcpBinding_stock_service" type="tns:stock_service">
+    <wsp:PolicyReference URI="#NetTcpBinding_stock_service_policy">
+    </wsp:PolicyReference>
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="GetStock">
+      <soap12:operation soapAction="http://tempuri.org/stock_service/GetStock" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStockItem">
+      <soap12:operation soapAction="http://tempuri.org/stock_service/GetStockItem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddStock">
+      <soap12:operation soapAction="http://tempuri.org/stock_service/AddStock" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStock">
+      <soap12:operation soapAction="http://tempuri.org/stock_service/UpdateStock" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInvoiceofdDate">
+      <soap12:operation soapAction="http://tempuri.org/stock_service/GetInvoiceofdDate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrder">
+      <soap12:operation soapAction="http://tempuri.org/stock_service/GetOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchInvoice">
+      <soap12:operation soapAction="http://tempuri.org/stock_service/SearchInvoice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MakeInvoice">
+      <soap12:operation soapAction="http://tempuri.org/stock_service/MakeInvoice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddOrders">
+      <soap12:operation soapAction="http://tempuri.org/stock_service/AddOrders" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUpcomingExpStock">
+      <soap12:operation soapAction="http://tempuri.org/stock_service/GetUpcomingExpStock" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLessStock">
+      <soap12:operation soapAction="http://tempuri.org/stock_service/GetLessStock" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteStock">
+      <soap12:operation soapAction="http://tempuri.org/stock_service/DeleteStock" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExpiredStock">
+      <soap12:operation soapAction="http://tempuri.org/stock_service/GetExpiredStock" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Stock_Service_Imp">
+    <wsdl:port name="NetTcpBinding_stock_service" binding="tns:NetTcpBinding_stock_service">
+      <soap12:address location="net.tcp://localhost:8000/TcpBinding" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://localhost:8000/TcpBinding</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Upn>LAPTOP-4LBAI7O5\nilay</Upn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

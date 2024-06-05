@@ -1,0 +1,15 @@
+C:\Nilay\SEM-6\WSD\MediStock_Project\MediStock_Host\bin\Debug\MediStock_Host.exe.config
+C:\Nilay\SEM-6\WSD\MediStock_Project\MediStock_Host\bin\Debug\MediStock_Host.exe
+C:\Nilay\SEM-6\WSD\MediStock_Project\MediStock_Host\bin\Debug\MediStock_Host.pdb
+C:\Nilay\SEM-6\WSD\MediStock_Project\MediStock_Host\bin\Debug\MediStock_Service.dll
+C:\Nilay\SEM-6\WSD\MediStock_Project\MediStock_Host\bin\Debug\MediStock_Service.pdb
+C:\Nilay\SEM-6\WSD\MediStock_Project\MediStock_Host\bin\Debug\MediStock_Service.dll.config
+C:\Nilay\SEM-6\WSD\MediStock_Project\MediStock_Host\obj\Debug\MediStock_Host.csproj.AssemblyReference.cache
+C:\Nilay\SEM-6\WSD\MediStock_Project\MediStock_Host\obj\Debug\MediStock_Host.csproj.SuggestedBindingRedirects.cache
+C:\Nilay\SEM-6\WSD\MediStock_Project\MediStock_Host\obj\Debug\MediStock_Host.Form1.resources
+C:\Nilay\SEM-6\WSD\MediStock_Project\MediStock_Host\obj\Debug\MediStock_Host.Properties.Resources.resources
+C:\Nilay\SEM-6\WSD\MediStock_Project\MediStock_Host\obj\Debug\MediStock_Host.csproj.GenerateResource.cache
+C:\Nilay\SEM-6\WSD\MediStock_Project\MediStock_Host\obj\Debug\MediStock_Host.csproj.CoreCompileInputs.cache
+C:\Nilay\SEM-6\WSD\MediStock_Project\MediStock_Host\obj\Debug\MediStock_Host.csproj.CopyComplete
+C:\Nilay\SEM-6\WSD\MediStock_Project\MediStock_Host\obj\Debug\MediStock_Host.exe
+C:\Nilay\SEM-6\WSD\MediStock_Project\MediStock_Host\obj\Debug\MediStock_Host.pdb

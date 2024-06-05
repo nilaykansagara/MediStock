@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/MediStock_Service" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/MediStock_Service" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfStock">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Stock" nillable="true" type="tns:Stock" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStock" nillable="true" type="tns:ArrayOfStock" />
+  <xs:complexType name="Stock">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="item_available" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="item_comp" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="item_exp" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="item_id" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="item_name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="item_price" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="med_per_packate" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="storage_col" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="storage_row" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Stock" nillable="true" type="tns:Stock" />
+  <xs:complexType name="ArrayOfInvoice">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Invoice" nillable="true" type="tns:Invoice" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInvoice" nillable="true" type="tns:ArrayOfInvoice" />
+  <xs:complexType name="Invoice">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bill_no" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="contact" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="customer_name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="doc_name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="total_amount" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Invoice" nillable="true" type="tns:Invoice" />
+  <xs:complexType name="ArrayOfInvoice_Order">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Invoice_Order" nillable="true" type="tns:Invoice_Order" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInvoice_Order" nillable="true" type="tns:ArrayOfInvoice_Order" />
+  <xs:complexType name="Invoice_Order">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bill_no" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="id" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="item_com_name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="item_id" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="item_name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="no_of_packet" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Invoice_Order" nillable="true" type="tns:Invoice_Order" />
+</xs:schema>
